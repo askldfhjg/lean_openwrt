@@ -24,7 +24,7 @@ on:
 
 env:
   
-  REPO_URL: https://github.com/ccbcfan/lede
+  REPO_URL: https://github.com/askldfhjg/lede
   #REPO_URL: https://github.com/coolsnowwolf/lede
   #REPO_URL: https://github.com/coolsnowwolf/openwrt
   REPO_BRANCH: master
