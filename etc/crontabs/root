@@ -1,1 +1,4 @@
 0 4 * * * /etc/coremark.sh
+0 2 * * * lua /usr/share/passwall/rule_update.lua nil log > /dev/null 2>&1 &
+0 3 * * * lua /usr/share/passwall/subscribe.lua start log > /dev/null 2>&1 &
+00 5 * * * sleep 5 && touch /etc/banner && reboot
