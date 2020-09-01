@@ -73,17 +73,8 @@ config udpxy
 config zerotier
 	option init 'zerotier'
 
-config mwan3
-	option exec '/etc/init.d/mwan3 reload'
-
 config cpufreq
 	option init 'cpufreq'
-
-config flowoffload
-	option init 'flowoffload'
-
-config ipsec
-	option init 'ipsec'
 
 config passwall
 	option init 'passwall'
@@ -94,29 +85,11 @@ config passwall_server
 config pppoe-relay
 	option init 'pppoe-relay'
 
-config vlmcsd
-	option init 'kms'
-
 config arpbind
 	option init 'arpbind'
 
 config frp
 	option init 'frp'
-
-config syncdial
-	option exec '/bin/genwancfg'
-
-config usb_printer
-	option init 'usb_printer'
-
-config vsftpd
-	option init 'vsftpd'
-
-config mia
-	option init 'mia'
-
-config mwan3helper
-	option init 'mwan3helper'
 
 config sfe
 	option init 'sfe'
