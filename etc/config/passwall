@@ -9,8 +9,8 @@ config global
 	option localhost_tcp_proxy_mode 'gfwlist'
 	option localhost_udp_proxy_mode 'gfwlist'
 	option enabled '1'
-	option tcp_node1 'a8da6c1b20924a3e8ea179cccd241565'
-	option udp_node1 'a8da6c1b20924a3e8ea179cccd241565'
+	option tcp_node1 '6dd1de351185490592448ec1f4bbfadd'
+	option udp_node1 '6dd1de351185490592448ec1f4bbfadd'
 
 config global_haproxy
 	option balancing_enable '0'
@@ -31,9 +31,9 @@ config global_forwarding
 config global_other
 	option status 'big_icon show_check_port show_ip111'
 	option nodes_ping 'auto_ping tcping'
-	option nodes_display 'compact_display_nodes show_add_mode'
 	option tcp_node_num '1'
 	option udp_node_num '1'
+	option nodes_display 'compact_display_nodes show_add_mode show_group'
 
 config global_rules
 	option chnlist_update '1'
@@ -45,12 +45,12 @@ config global_rules
 	option gfwlist_url 'https://cdn.jsdelivr.net/gh/Loukky/gfwlist-by-loukky/gfwlist.txt'
 	option chnroute_url 'https://ispip.clang.cn/all_cn.txt'
 	option chnroute6_url 'https://ispip.clang.cn/all_cn_ipv6.txt'
-	option gfwlist_version '2020-08-25'
-	option chnroute_version '2020-08-25'
-	option chnlist_version '2020-08-25'
 	option auto_update '1'
 	option week_update '7'
 	option time_update '2'
+	option gfwlist_version '2020-08-31'
+	option chnroute_version '2020-08-31'
+	option chnlist_version '2020-08-31'
 
 config global_app
 	option v2ray_file '/usr/bin/v2ray/'
