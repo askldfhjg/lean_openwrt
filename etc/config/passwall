@@ -9,8 +9,9 @@ config global
 	option localhost_tcp_proxy_mode 'gfwlist'
 	option localhost_udp_proxy_mode 'gfwlist'
 	option enabled '1'
-	option tcp_node1 '6dd1de351185490592448ec1f4bbfadd'
-	option udp_node1 '6dd1de351185490592448ec1f4bbfadd'
+	option dns_default 'china'
+	option tcp_node1 '7369ab00077349bf87260798bf62cc95'
+	option udp_node1 '7369ab00077349bf87260798bf62cc95'
 
 config global_haproxy
 	option balancing_enable '0'
