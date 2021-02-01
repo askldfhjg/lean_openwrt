@@ -11,4 +11,3 @@ network:x:101:
 nogroup:x:65534:
 dnsmasq:x:453:dnsmasq
 lp:x:7:p910nd
-transmission:x:224:transmission

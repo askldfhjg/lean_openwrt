@@ -1,80 +1,9 @@
 
-config redirect
-	option target 'DNAT'
-	option src 'wan'
-	option dest 'lan'
-	option proto 'tcp udp'
-	option dest_ip '192.168.9.176'
-	option src_dport '1-3388'
-	option dest_port '1-3388'
-
-config redirect
-	option target 'DNAT'
-	option src 'wan'
-	option dest 'lan'
-	option proto 'tcp'
-	option src_dport '3389'
-	option dest_ip '192.168.9.163'
-	option dest_port '3389'
-	option name 'RDP'
-
-config redirect
-	option target 'DNAT'
-	option src 'wan'
-	option dest 'lan'
-	option proto 'tcp udp'
-	option src_dport '3390-8079'
-	option dest_ip '192.168.9.176'
-	option dest_port '3390-8079'
-	option name 'Forward'
-
-config redirect
-	option target 'DNAT'
-	option src 'wan'
-	option dest 'lan'
-	option proto 'tcp udp'
-	option src_dport '8080'
-	option dest_ip '192.168.9.1'
-	option dest_port '80'
-	option name 'Forward8080'
-
-config redirect
-	option target 'DNAT'
-	option src 'wan'
-	option dest 'lan'
-	option proto 'tcp udp'
-	option dest_ip '192.168.9.176'
-	option name 'Forward'
-	option src_dport '8081-65534'
-	option dest_port '8081-65534'
-
-config redirect
-	option target 'DNAT'
-	option src 'wan'
-	option dest 'lan'
-	option proto 'tcp'
-	option src_dport '22'
-	option dest_ip '192.168.9.176'
-	option dest_port '22'
-	option name 'SSH'
-	option enabled '0'
-
-config redirect
-	option target 'DNAT'
-	option src 'wan'
-	option dest 'lan'
-	option proto 'tcp'
-	option src_dport '80'
-	option dest_ip '192.168.9.176'
-	option dest_port '80'
-	option name 'HTTP'
-	option enabled '0'
-
 config defaults
 	option syn_flood '1'
 	option input 'ACCEPT'
 	option output 'ACCEPT'
-	option forward 'ACCEPT'
+	option forward 'REJECT'
 	option fullcone '1'
 
 config zone
@@ -88,11 +17,11 @@ config zone
 	option name 'wan'
 	list network 'wan'
 	list network 'wan6'
+	option input 'REJECT'
 	option output 'ACCEPT'
+	option forward 'REJECT'
 	option masq '1'
 	option mtu_fix '1'
-	option input 'ACCEPT'
-	option forward 'ACCEPT'
 
 config forwarding
 	option src 'lan'
@@ -195,11 +124,6 @@ config rule
 
 config include
 	option path '/etc/firewall.user'
-
-config include 'zerotier'
-	option type 'script'
-	option path '/etc/zerotier.start'
-	option reload '1'
 
 config include 'miniupnpd'
 	option type 'script'

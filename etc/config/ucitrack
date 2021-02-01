@@ -55,26 +55,20 @@ config samba
 config tinyproxy
 	option init 'tinyproxy'
 
-config frps
-	option init 'frps'
-
-config hd-idle
-	option init 'hd-idle'
-
 config upnpd
 	option init 'miniupnpd'
 
-config nlbwmon
-	option init 'nlbwmon'
+config luci_statistics
+	option init 'luci_statistics'
 
 config udpxy
 	option init 'udpxy'
 
-config zerotier
-	option init 'zerotier'
+config uuplugin
+	option init 'uuplugin'
 
-config cpufreq
-	option init 'cpufreq'
+config smartdns
+	option init 'smartdns'
 
 config passwall
 	option init 'passwall'
@@ -82,15 +76,6 @@ config passwall
 config passwall_server
 	option init 'passwall_server'
 
-config pppoe-relay
-	option init 'pppoe-relay'
-
 config arpbind
 	option init 'arpbind'
-
-config frp
-	option init 'frp'
-
-config sfe
-	option init 'sfe'
 
